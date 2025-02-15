@@ -57,3 +57,12 @@ let calculateRentalCost = (days, carType, insurance = false) => {//declare arrow
 };
 console.log(calculateRentalCost(3, "Economy", true));//log
 console.log(calculateRentalCost(5, "Luxury", false));
+
+//Task 5-Returning Values
+let calculateLoanPayment = (principal, rate, time) => {//declare arrow function
+    let totalPayment = principal + (principal * rate * time);
+    return `Total Payment: $${totalPayment.toFixed(2)}`;//return value
+};
+console.log(calculateLoanPayment(1000, 0.05, 2));//log
+console.log(calculateLoanPayment(5000, 0.07, 3));
+
