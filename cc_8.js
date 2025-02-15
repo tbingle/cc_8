@@ -41,3 +41,19 @@ let result6 = calculateServiceFee(500, "Standard");
 
 console.log(result5);//log
 console.log(result6);
+
+//Task 4- Parameters and Arguments
+let calculateRentalCost = (days, carType, insurance = false) => {//declare arrow function
+    let rates = {
+        "Economy": 40,
+        "Standard": 60,
+        "Luxury": 100
+    };
+    let cost = rates[carType] * days;//rates
+    if (insurance) {
+        cost += 20 * days;
+    }
+    return `Total Rental Cost: $${cost}`;//return  value
+};
+console.log(calculateRentalCost(3, "Economy", true));//log
+console.log(calculateRentalCost(5, "Luxury", false));
