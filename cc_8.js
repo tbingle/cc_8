@@ -21,3 +21,23 @@ let result4 = calculateDiscount(250, 0.15); //second price
 console.log(result3);//log
 console.log(result4);
 
+//Task 3- Arrow Function
+let calculateServiceFee = (amount, serviceType) => {//declare arrow function
+    
+    let serviceFees = {
+        "Premium": 0.15,
+        "Standard": 0.10,
+        "Basic": 0.05
+    };
+    let fee = serviceFees[serviceType];
+    if (fee === undefined) {
+        return "Invalid service type";
+    }
+    return `Service Fee: $${(amount * fee).toFixed(2)}`;
+};
+
+let result5 = calculateServiceFee(200, "Premium");  //tests
+let result6 = calculateServiceFee(500, "Standard"); 
+
+console.log(result5);//log
+console.log(result6);
