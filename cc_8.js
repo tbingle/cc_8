@@ -73,3 +73,14 @@ let filterLargeTransactions = (transactions, filterFunction) => {//declare funct
 let transactions = [200, 1500, 3200, 800, 2500];//transaction list
 console.log(filterLargeTransactions(transactions, amount => amount > 1000));
 
+//Task 7- Closures
+let createCartTracker = () => {//declare arrow function
+    let total = 0;
+    return (amount) => {//return value
+        total += amount;
+        return `Total Cart Value: $${total}`;
+    };
+};
+let cart = createCartTracker();
+console.log(cart(20)); //log
+console.log(cart(35));
