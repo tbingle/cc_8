@@ -66,3 +66,10 @@ let calculateLoanPayment = (principal, rate, time) => {//declare arrow function
 console.log(calculateLoanPayment(1000, 0.05, 2));//log
 console.log(calculateLoanPayment(5000, 0.07, 3));
 
+//Task 6-Higher-Order Functions
+let filterLargeTransactions = (transactions, filterFunction) => {//declare function
+    return transactions.filter(filterFunction);//return value
+};
+let transactions = [200, 1500, 3200, 800, 2500];//transaction list
+console.log(filterLargeTransactions(transactions, amount => amount > 1000));
+
