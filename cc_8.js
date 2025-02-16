@@ -84,3 +84,17 @@ let createCartTracker = () => {//declare arrow function
 let cart = createCartTracker();
 console.log(cart(20)); //log
 console.log(cart(35));
+
+//Task 8- Recursion in JavaScript
+let calculateSavings = (years, amount) => {//declare arrow function
+    if (years === 0) {
+        return amount;
+    }
+    amount += amount * 0.05;//declare value
+    return calculateSavings(years - 1, amount);
+};
+let result7 = calculateSavings(8, 1000);
+let result8 = calculateSavings(5, 5000);
+
+console.log(`Projected Savings: $${result7.toFixed(2)}`);//log
+console.log(`Projected Savings: $${result8.toFixed(2)}`);
